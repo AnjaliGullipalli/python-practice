@@ -1,0 +1,16 @@
+class solution:
+    def moveZerosToFront(self, arr, n):
+        non_zero=[]
+        z_count=0
+        for i in arr:
+            if i!=0:
+                non_zero.append(i)
+            else:
+                z_count+=1
+        return [0]*z_count+non_zero
+arr=[2,3,40,6,0,0,1]
+n=len(arr)
+sol=solution()
+print(sol.moveZerosToFront(arr, n))
+    
+    

@@ -1,0 +1,9 @@
+def largest(arr1):
+    lar=arr1[0]
+    for i in arr1:
+        if i>lar:
+            lar=i
+    return lar
+arr1=[2,3,45,67,9]
+print(largest(arr1))
+        
