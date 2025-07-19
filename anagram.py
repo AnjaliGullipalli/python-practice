@@ -11,3 +11,7 @@ for value in word.values():
     if value!=0:
         print(False)
 print(True)
+
+
+
+

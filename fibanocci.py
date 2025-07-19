@@ -1,41 +1,27 @@
-def fibonacci(n):
-    a=0
-    b=1
-    
-    if n<0:
-        return 'invalid'
-    elif n==1:
+def fibanocci(n):
+    a,b=0,1
+    if n==0:
         return a
+    if n==0 or n==1:
+        return b
     else:
         for i in range(1,n):
-            c = a + b
-            a = b
-            b = c
+            c=a+b
+            a=b
+            b=c
         return b
+print(fibanocci(8))
 
-print(fibonacci(10))
+def fib(n):
+    if n<=1:
+        return n
+    return fib(n-1)+fib(n-2)
+print(fib(8))
 
-def Fibonacci(n):
 
-    if n < 0:
-        print("Incorrect input")
+n1=int(input('enter a num:'))
+a,b=0,1
+for _ in range(n1):
+    print(a,end=' ')
+    a,b=b,a+b
 
-    elif n == 0:
-        return 0
-
-    elif n == 1 or n == 2:
-        return 1
-
-    else:
-        return Fibonacci(n-1) + Fibonacci(n-2)
-
-print(Fibonacci(9))
-
-def fibonacci_sequence(n):
-    a, b = 0, 1
-    for _ in range(n):
-        print(a, end=" ")
-        a, b = b, a + b
-
-# Print first 10 Fibonacci numbers
-fibonacci_sequence(10)
